@@ -199,7 +199,7 @@
 
           <!-- the wall + photos -->
           <div id="paint-stage" class="paint-stage relative aspect-[4/3] rounded-[22px] shadow-lift ring-1 ring-ink/10 lg:aspect-[1/1.06]"
-               data-strips="4">
+               data-strips="2">
             <div class="paint-wall"></div>
 
             <!-- Each layer = one job. JS duplicates the <img> into strips for the roller. -->
@@ -216,27 +216,27 @@
             <p class="paint-caption absolute bottom-3 right-3 z-50 rounded-full bg-white/95 px-3.5 py-1.5 text-[13px] font-semibold text-ink shadow-card" data-show="true" aria-live="polite">Jack's Bar, Moores Hotel</p>
 
             <!-- the roller (line-art, brand gradient sleeve) -->
-            <svg class="roller" viewBox="0 0 200 262" aria-hidden="true">
+            <svg class="roller" viewBox="0 0 200 190" aria-hidden="true">
               <defs>
                 <linearGradient id="sleeveGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0A4FC2"/><stop offset=".55" stop-color="#01866F"/><stop offset="1" stop-color="#00A940"/></linearGradient>
                 <clipPath id="sleeveClip"><rect x="10" y="12" width="180" height="38" rx="12"/></clipPath>
               </defs>
               <!-- frame -->
-              <path d="M190 31h4a6 6 0 0 1 6 6v36a8 8 0 0 1-8 8H108a8 8 0 0 0-8 8v54" fill="none" stroke="#12231F" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M190 31h4a6 6 0 0 1 6 6v24a8 8 0 0 1-8 8H108a8 8 0 0 0-8 8v26" fill="none" stroke="#12231F" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
               <!-- grip -->
-              <rect x="88" y="140" width="24" height="104" rx="12" fill="#0A4FC2" stroke="#12231F" stroke-width="3.5"/>
-              <path d="M88 162h24M88 172h24" stroke="#12231F" stroke-width="3" opacity=".35"/>
-              <rect x="94" y="236" width="12" height="18" rx="5" fill="#12231F"/>
+              <rect x="90" y="100" width="20" height="74" rx="10" fill="#0A4FC2" stroke="#12231F" stroke-width="2.6"/>
+              <path d="M90 116h20M90 124h20" stroke="#12231F" stroke-width="2.2" opacity=".35"/>
+              <rect x="95" y="170" width="10" height="14" rx="4" fill="#12231F"/>
               <!-- sleeve -->
               <rect x="10" y="12" width="180" height="38" rx="12" fill="url(#sleeveGrad)"/>
               <g clip-path="url(#sleeveClip)">
-                <g class="nap" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".28">
+                <g class="nap" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity=".28">
                   <path d="M22 8h40M84 8h52M152 8h28M30 16h46M100 16h40M160 16h24M18 24h36M70 24h58M146 24h36M28 32h52M96 32h30M140 32h44M20 40h40M74 40h56M150 40h30M30 48h46M100 48h40M160 48h24M18 56h36M70 56h58M146 56h36"/>
                 </g>
               </g>
-              <rect x="10" y="12" width="180" height="38" rx="12" fill="none" stroke="#12231F" stroke-width="3.5"/>
-              <rect x="4" y="22" width="8" height="18" rx="3" fill="#F6F5F0" stroke="#12231F" stroke-width="3"/>
-              <rect x="188" y="22" width="8" height="18" rx="3" fill="#F6F5F0" stroke="#12231F" stroke-width="3"/>
+              <rect x="10" y="12" width="180" height="38" rx="12" fill="none" stroke="#12231F" stroke-width="2.6"/>
+              <rect x="4" y="22" width="8" height="18" rx="3" fill="#F6F5F0" stroke="#12231F" stroke-width="2.2"/>
+              <rect x="188" y="22" width="8" height="18" rx="3" fill="#F6F5F0" stroke="#12231F" stroke-width="2.2"/>
             </svg>
           </div>
         </div>

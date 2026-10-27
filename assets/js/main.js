@@ -63,14 +63,14 @@
 
   /* ---------- 3. Hero roller ----------
      The wall is split into vertical strips. The roller runs down the first
-     strip, up the next and so on; each strip's clip-path opens in step with it,
+     strip and back up the second; each strip's clip-path opens in step with it,
      so the photo appears exactly where the roller has been. */
   var stage = $('#paint-stage');
   if (stage) (function () {
     var layers = $$('.paint-layer', stage);
     var roller = $('.roller', stage);
     var caption = $('.paint-caption', stage);
-    var N = parseInt(stage.dataset.strips, 10) || 4;
+    var N = parseInt(stage.dataset.strips, 10) || 2;
     var EASE = 'cubic-bezier(.45,.05,.55,.95)';
     var z = 1;
     var pos = { i: N - 1, f: 0 }; // roller position: strip index + edge (0 = top, 1 = bottom)
@@ -159,7 +159,7 @@
       layer.style.zIndex = ++z;
       layer._strips.forEach(function (s, i) { s.style.clipPath = clipClosed(i, i % 2 === 0); });
       caption.dataset.show = 'false';
-      var dur = stage.clientWidth < 500 ? 820 : 950;
+      var dur = stage.clientWidth < 500 ? 1000 : 1150;
       var chain = ready().then(function () { return moveTo(0, 0, pos.i === 0 ? 10 : 750); });
       for (var i = 0; i < N; i++) (function (i) {
         chain = chain.then(ready).then(function () {

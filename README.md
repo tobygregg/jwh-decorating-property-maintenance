@@ -38,10 +38,10 @@ _fb-pack/               ← source material from Facebook (not published — und
 
 ## Hero roller (Toby's design note)
 
-A paint roller works across a bare wall in four strokes (down, up, down, up), and each stroke reveals a real JWH job underneath. It then holds for a few seconds with a caption and paints the next job over the top. The order is Jack's Bar → shopfront → wallpaper, then it repeats.
+A large paint roller sweeps across a bare wall in two strokes (down, then up), and each stroke reveals a real JWH job underneath. It then holds for a few seconds with a caption and paints the next job over the top. The order is Jack's Bar → shopfront → wallpaper, then it repeats.
 
 - To change the photos, edit the `.paint-layer` blocks inside `#paint-stage` in `index.html`. Each block has one `<img>` and a `data-caption`. The JS splits each photo into strips.
-- To change the number of strokes, edit `data-strips="4"` on `#paint-stage`.
+- To change the number of strokes, edit `data-strips="2"` on `#paint-stage` (the roller resizes to fit).
 - The animation pauses when the hero is off-screen or the tab is hidden. With reduced motion turned on, the first photo shows straight away and the roller stays still.
 
 ## Editing
