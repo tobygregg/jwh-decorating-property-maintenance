@@ -117,3 +117,40 @@
 /* keyframes used by the hand-written rules above */
 @keyframes fade-up { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
 @keyframes stroke { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+/* ---------- Small decorating details ---------- */
+/* Kicker labels get a little brush stroke instead of a flat bar */
+.kicker::before {
+  width: 30px; height: 9px; border-radius: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 10'%3E%3Cdefs%3E%3ClinearGradient id='g'%3E%3Cstop offset='0' stop-color='%230A4FC2'/%3E%3Cstop offset='1' stop-color='%2300A940'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M1 6c3-3 9-4 16-4s15 0 21 2c1 1 0 3-2 3-7 1-14 2-22 2S3 9 1 6z' fill='url(%23g)'/%3E%3C/svg%3E") no-repeat center / contain;
+}
+
+/* Green painter's tape — torn ends, slightly see-through */
+.tape {
+  position: absolute; z-index: 20; width: 92px; height: 24px; pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.35), rgba(255,255,255,0) 45%, rgba(18,35,31,.08)),
+    repeating-linear-gradient(90deg, rgba(255,255,255,.08) 0 2px, transparent 2px 5px),
+    #3DBE6E;
+  opacity: .9;
+  clip-path: polygon(0 6%, 3% 0, 6% 9%, 9% 0, 91% 0, 94% 8%, 97% 0, 100% 10%, 98% 28%, 100% 46%, 97% 64%, 100% 82%, 98% 100%, 94% 92%, 90% 100%, 7% 100%, 4% 90%, 1% 100%, 2% 78%, 0 60%, 3% 42%, 0 24%);
+}
+
+/* Spirit level bubble drifts back to centre */
+.bubble { transform-box: fill-box; transform-origin: center; animation: bubble 6s ease-in-out infinite; }
+@keyframes bubble { 0%, 100% { transform: translateX(0); } 30% { transform: translateX(-7px); } 60% { transform: translateX(5px); } }
+
+/* Footer: roller paints the brand line once the footer is on screen */
+.footer-paint-bar { transform: scaleX(0); transition: transform 1.8s cubic-bezier(.45,.05,.55,.95); }
+.footer-roller { left: -40px; transition: left 1.8s cubic-bezier(.45,.05,.55,.95), opacity .4s 1.9s; }
+.footer-roller-sleeve { transform-box: fill-box; transform-origin: center; }
+.footer-paint.is-painted .footer-paint-bar { transform: scaleX(1); }
+.footer-paint.is-painted .footer-roller { left: calc(100% - 40px); opacity: 0; }
+.footer-paint.is-painted .footer-roller-sleeve { animation: spin 1.8s cubic-bezier(.45,.05,.55,.95) both; }
+@keyframes spin { to { transform: rotate(720deg); } }
+html:not(.js) .footer-paint-bar { transform: none; }
+html:not(.js) .footer-roller { display: none; }
+@media (prefers-reduced-motion: reduce) {
+  .footer-paint-bar { transform: none; }
+  .footer-roller { display: none; }
+}

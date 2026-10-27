@@ -50,6 +50,17 @@
     revealEls.forEach(function (el) { el.classList.add('is-in'); });
   }
 
+  // Footer roller paints the brand line once
+  var footerPaint = $('.footer-paint');
+  if (footerPaint) {
+    if ('IntersectionObserver' in window && !reduceMotion) {
+      var fio = new IntersectionObserver(function (en) {
+        if (en[0].isIntersecting) { footerPaint.classList.add('is-painted'); fio.disconnect(); }
+      }, { threshold: 1 });
+      fio.observe(footerPaint);
+    } else footerPaint.classList.add('is-painted');
+  }
+
   /* ---------- 3. Hero roller ----------
      The wall is split into vertical strips. The roller runs down the first
      strip, up the next and so on; each strip's clip-path opens in step with it,

@@ -248,7 +248,26 @@
          Each <button role="tab"> pairs with the panel of the same data-svc.
     ════════════════════════════════════════════════════════════════════════ -->
     <section id="services" class="relative bg-white py-20 sm:py-24 lg:py-28">
-      <div class="wrap">
+      <div class="wrap relative">
+        <!-- line-art: stepladder with a tin on the top step -->
+        <svg class="pointer-events-none absolute right-6 -top-4 hidden h-52 w-44 lg:block xl:right-12" viewBox="0 0 160 200" aria-hidden="true" data-reveal style="--d:200ms">
+          <path d="M6 195c20-5 42 2 64-2s50-6 84 0" fill="none" stroke="#00A940" stroke-width="3.5" stroke-linecap="round" opacity=".4"/>
+          <g fill="none" stroke="#12231F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M88 48 140 192M97.5 110h12.9" opacity=".4"/>
+            <path d="M52 48 30 192M88 48l22 144"/>
+          </g>
+          <g fill="#F6F5F0" stroke="#12231F" stroke-width="2.2" stroke-linejoin="round">
+            <rect x="46.5" y="81" width="47" height="7" rx="2"/>
+            <rect x="41" y="117" width="58" height="7" rx="2"/>
+            <rect x="35.5" y="153" width="69" height="7" rx="2"/>
+          </g>
+          <rect x="44" y="40" width="52" height="11" rx="3" fill="#0A4FC2" stroke="#12231F" stroke-width="2.4"/>
+          <path d="M78 15 96 3" stroke="#12231F" stroke-width="3" stroke-linecap="round"/>
+          <path d="M58 14v22c0 3 5 4 12 4s12-1 12-4V14" fill="#fff" stroke="#12231F" stroke-width="2.2"/>
+          <ellipse cx="70" cy="14" rx="12" ry="3.6" fill="#00A940" stroke="#12231F" stroke-width="2.2"/>
+          <path class="drip" d="M60 16.5h4.5v10a2.25 2.25 0 0 1-4.5 0z" fill="#00A940"/>
+          <path d="M60 26h20" stroke="#12231F" stroke-width="1.8" opacity=".25"/>
+        </svg>
         <div class="max-w-2xl" data-reveal>
           <p class="kicker">What we do</p>
           <h2 class="h2 mt-3">Painting, decorating and upkeep, inside and out</h2>
@@ -291,7 +310,9 @@
           </div>
 
           <!-- panels -->
-          <div class="lg:col-span-8" data-reveal style="--d:160ms">
+          <div class="relative lg:col-span-8" data-reveal style="--d:160ms">
+            <span class="tape -left-3 -top-3 -rotate-[8deg] sm:-left-5" aria-hidden="true"></span>
+            <span class="tape -right-3 -top-2 hidden rotate-[6deg] md:block" aria-hidden="true"></span>
 
             <!-- Interior decorating -->
             <article id="panel-interior" role="tabpanel" aria-labelledby="tab-interior" class="svc-panel grid overflow-hidden rounded-3xl border border-ink/10 bg-white shadow-card md:grid-cols-2" data-svc="Interior decorating">
@@ -446,7 +467,15 @@
         <div class="mt-10 grid grid-cols-2 gap-3 sm:gap-4 lg:mt-12 lg:auto-rows-[210px] lg:grid-cols-4">
 
           <!-- Feature: Moores Hotel -->
-          <div class="col-span-2 flex flex-col justify-between rounded-3xl bg-ink p-6 text-white sm:p-8 lg:col-span-1 lg:row-span-2" data-reveal>
+          <div class="relative col-span-2 flex flex-col justify-between overflow-hidden rounded-3xl bg-ink p-6 text-white sm:p-8 lg:col-span-1 lg:row-span-2" data-reveal>
+            <!-- paint running down from the top edge -->
+            <svg class="pointer-events-none absolute right-5 top-0 h-20 w-28" viewBox="0 0 112 80" aria-hidden="true">
+              <defs><linearGradient id="runG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#01866F"/><stop offset="1" stop-color="#00A940"/></linearGradient></defs>
+              <path d="M0 0h112v8c-6 0-6 4-12 4s-6-4-12-4-6 3-12 3-6-3-12-3-6 4-12 4-6-4-12-4-6 3-12 3-6-3-12-3-6 2-8 2z" fill="url(#runG)"/>
+              <path class="drip" d="M20 8h7v30a3.5 3.5 0 0 1-7 0z" fill="#01866F"/>
+              <path class="drip" style="animation-delay:1.2s" d="M62 9h6v46a3 3 0 0 1-6 0z" fill="#00A940"/>
+              <path class="drip" style="animation-delay:2.1s" d="M92 9h5v18a2.5 2.5 0 0 1-5 0z" fill="#00A940"/>
+            </svg>
             <div>
               <svg class="h-9 w-9 text-jwhgreen" aria-hidden="true"><use href="#i-building"/></svg>
               <h3 class="mt-5 text-[1.7rem] font-semibold leading-tight text-white">Moores Hotel</h3>
@@ -505,6 +534,7 @@
 
         <div class="relative lg:col-span-5" data-reveal>
           <div class="absolute -inset-3 rotate-2 rounded-[34px] bg-gradient-to-br from-jwhgreen/15 to-jwhblue/10 sm:-inset-4" aria-hidden="true"></div>
+          <span class="tape -top-3 left-1/2 -translate-x-1/2 rotate-[-3deg]" aria-hidden="true"></span>
           <figure class="relative overflow-hidden rounded-3xl shadow-lift ring-1 ring-ink/10">
             <img src="images/work/sea-view-room-sm.webp" srcset="images/work/sea-view-room-sm.webp 800w, images/work/sea-view-room.webp 1600w" sizes="(min-width: 1024px) 460px, 92vw" width="1600" height="1200" alt="A JWH job in progress: a newly plastered room with a wide sea view" loading="lazy" class="aspect-[4/3] w-full object-cover md:aspect-[16/10] lg:aspect-[4/5]" style="object-position:55% 72%">
           </figure>
@@ -520,7 +550,16 @@
         </div>
 
         <div class="lg:col-span-7">
-          <div data-reveal>
+          <div class="relative" data-reveal>
+            <svg class="pointer-events-none absolute -top-1 right-0 h-7 w-32 sm:-top-2 sm:h-9 sm:w-40" viewBox="0 0 160 36" aria-hidden="true">
+              <rect x="2" y="6" width="156" height="24" rx="6" fill="#fff" stroke="#12231F" stroke-width="2.2"/>
+              <path d="M14 12v12M146 12v12" stroke="#12231F" stroke-width="2" stroke-linecap="round" opacity=".3"/>
+              <rect x="58" y="11" width="44" height="14" rx="7" fill="#E6F5EC" stroke="#12231F" stroke-width="2"/>
+              <path d="M74 11v14M86 11v14" stroke="#12231F" stroke-width="1.6" opacity=".45"/>
+              <circle class="bubble" cx="80" cy="18" r="4.2" fill="#00A940"/>
+              <rect x="22" y="13" width="26" height="10" rx="3" fill="#0A4FC2" opacity=".9"/>
+              <rect x="112" y="13" width="26" height="10" rx="3" fill="#0A4FC2" opacity=".9"/>
+            </svg>
             <p class="kicker">About JWH</p>
             <h2 class="h2 mt-3">Taking pride in every job</h2>
             <div class="mt-5 space-y-4 text-[1.05rem] leading-relaxed text-muted">
@@ -583,7 +622,19 @@
           </ul>
         </div>
 
-        <div class="lg:col-span-7" data-reveal style="--d:120ms">
+        <div class="relative lg:col-span-7" data-reveal style="--d:120ms">
+          <!-- line-art: paint tray with a roller resting in it -->
+          <svg class="pointer-events-none absolute -top-12 right-4 z-10 h-20 w-32 sm:-top-14 sm:right-8 sm:h-24 sm:w-40" viewBox="0 0 160 96" aria-hidden="true">
+            <defs><linearGradient id="trayG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0A4FC2"/><stop offset=".55" stop-color="#01866F"/><stop offset="1" stop-color="#00A940"/></linearGradient></defs>
+            <path d="M6 70h148l-14 20H26z" fill="#fff" stroke="#12231F" stroke-width="2.4" stroke-linejoin="round"/>
+            <path d="M14 70c10-18 30-22 52-22h22l60 22" fill="#fff" stroke="#12231F" stroke-width="2.4" stroke-linejoin="round"/>
+            <path d="M22 70c8-12 22-16 40-16h18l12 16z" fill="#00A940"/>
+            <path d="M100 66l10-4M116 70l10-4" stroke="#12231F" stroke-width="2" stroke-linecap="round" opacity=".3"/>
+            <!-- roller -->
+            <path d="M118 40h10a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4h-16l-18 24" fill="none" stroke="#12231F" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" transform="rotate(-8 80 50)"/>
+            <rect x="40" y="30" width="78" height="20" rx="7" fill="url(#trayG)" stroke="#12231F" stroke-width="2.4" transform="rotate(-8 80 50)"/>
+            <rect x="82" y="78" width="9" height="16" rx="4.5" fill="#0A4FC2" stroke="#12231F" stroke-width="2.2" transform="rotate(-38 86 86)"/>
+          </svg>
           <form id="quote-form" action="https://formsubmit.co/toby1@greggs.org" method="POST" novalidate class="rounded-3xl bg-white p-6 shadow-lift ring-1 ring-ink/5 sm:p-8">
             <input type="hidden" name="_subject" value="New enquiry – JWH Decorating &amp; Property Maintenance (website draft)">
             <input type="hidden" name="_template" value="table">
@@ -638,7 +689,15 @@
   </main>
 
   <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
-  <footer class="border-t-[5px] border-transparent bg-ink text-white/70 [border-image:linear-gradient(90deg,#0A4FC2,#01866F,#00A940)_1]">
+  <footer class="bg-ink text-white/70">
+    <div class="footer-paint relative h-[5px] bg-white/10" aria-hidden="true">
+      <div class="footer-paint-bar absolute inset-0 origin-left bg-badge"></div>
+      <svg class="footer-roller absolute bottom-[5px] h-10 w-10" viewBox="0 0 40 40">
+        <path d="M20 27 30 10l4 2" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <rect x="31" y="3" width="6" height="11" rx="3" fill="#0A4FC2" stroke="#fff" stroke-width="2" transform="rotate(26 34 8)"/>
+        <g class="footer-roller-sleeve"><circle cx="20" cy="31" r="8" fill="#00A940" stroke="#fff" stroke-width="2"/><path d="M20 23v16M12 31h16" stroke="#fff" stroke-width="1.6" opacity=".45"/></g>
+      </svg>
+    </div>
     <div class="wrap grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-12">
       <div class="lg:col-span-5">
         <img src="images/brand/logo.webp" alt="JWH Decorating" width="480" height="288" loading="lazy" class="h-16 w-auto">
