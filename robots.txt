@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /_fb-pack/
+
+Sitemap: https://tobygregg.github.io/jwh-decorating-property-maintenance/sitemap.xml
